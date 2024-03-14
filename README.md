@@ -1,4 +1,4 @@
-# Home Assistant TP-Link Custom Components
+# Home Assistant TP-Link Custom Component
 This custom component is based on the official TP-Link integration for Home Assistant, with optimizations to reduce API query intervals from 5 seconds to 1 second. This improvement enables your TP-Link devices to react more quickly to commands, enhancing the overall responsiveness of your smart home setup.
 
 
