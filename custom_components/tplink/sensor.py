@@ -1,5 +1,4 @@
 """Support for TPLink HS100/HS110/HS200 smart switch energy sensors."""
-
 from __future__ import annotations
 
 from dataclasses import dataclass

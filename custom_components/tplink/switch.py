@@ -1,5 +1,4 @@
 """Support for TPLink HS100/HS110/HS200 smart switch."""
-
 from __future__ import annotations
 
 import logging
@@ -37,10 +36,8 @@ async def async_setup_entry(
     if device.is_strip:
         # Historically we only add the children if the device is a strip
         _LOGGER.debug("Initializing strip with %s sockets", len(device.children))
-        entities.extend(
-            SmartPlugSwitchChild(device, parent_coordinator, child)
-            for child in device.children
-        )
+        for child in device.children:
+            entities.append(SmartPlugSwitchChild(device, parent_coordinator, child))
     elif device.is_plug:
         entities.append(SmartPlugSwitch(device, parent_coordinator))
 
@@ -64,7 +61,7 @@ class SmartPlugLedSwitch(CoordinatedTPLinkEntity, SwitchEntity):
     ) -> None:
         """Initialize the LED switch."""
         super().__init__(device, coordinator)
-        self._attr_unique_id = f"{device.mac}_led"
+        self._attr_unique_id = f"{self.device.mac}_led"
         self._async_update_attrs()
 
     @async_refresh_after
@@ -80,7 +77,9 @@ class SmartPlugLedSwitch(CoordinatedTPLinkEntity, SwitchEntity):
     @callback
     def _async_update_attrs(self) -> None:
         """Update the entity's attributes."""
-        self._attr_is_on = self.device.led
+        is_on = self.device.led
+        self._attr_is_on = is_on
+        self._attr_icon = "mdi:led-on" if is_on else "mdi:led-off"
 
     @callback
     def _handle_coordinator_update(self) -> None:
