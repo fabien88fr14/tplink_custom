@@ -23,7 +23,7 @@ class TPLinkDataUpdateCoordinator(DataUpdateCoordinator[None]):
         self,
         hass: HomeAssistant,
         device: SmartDevice,
-        update_interval: timedelta(seconds=1),
+        update_interval: timedelta(seconds=2),
     ) -> None:
         """Initialize DataUpdateCoordinator to gather data for specific SmartPlug."""
         self.device = device

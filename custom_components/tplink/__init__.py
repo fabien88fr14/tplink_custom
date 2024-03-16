@@ -185,7 +185,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             f"Unexpected device found at {host}; expected {entry.unique_id}, found {found_mac}"
         )
 
-    parent_coordinator = TPLinkDataUpdateCoordinator(hass, device, timedelta(seconds=1))
+    parent_coordinator = TPLinkDataUpdateCoordinator(hass, device, timedelta(seconds=2))
     child_coordinators: list[TPLinkDataUpdateCoordinator] = []
 
     if device.is_strip:
