@@ -23,4 +23,4 @@ If you encounter any issues or have any questions about this custom component, f
 This custom component is based on the official TP-Link integration for Home Assistant. Special thanks to the developers of the original integration for their work.
 
 ## License
-This custom component is licensed under the MIT License. See the LICENSE file for more information.
+This custom component is licensed under the MIT License.
