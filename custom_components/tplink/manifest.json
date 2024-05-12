@@ -4,7 +4,7 @@
   "codeowners": ["@rytilahti", "@thegardenmonkey", "@bdraco", "@sdb9696"],
   "config_flow": true,
   "dependencies": ["network"],
-  "version": "2024.5.0",
+  "version": "2024.5.3",
   "dhcp": [
     {
       "registered_devices": true
