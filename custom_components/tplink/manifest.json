@@ -4,7 +4,7 @@
   "codeowners": ["@rytilahti", "@bdraco", "@sdb9696"],
   "config_flow": true,
   "dependencies": ["network"],
-  "version": "2024.9.1",
+  "version": "2024.11.0",
   "dhcp": [
     {
       "registered_devices": true
@@ -302,5 +302,5 @@
   "iot_class": "local_polling",
   "loggers": ["kasa"],
   "quality_scale": "platinum",
-  "requirements": ["python-kasa[speedups]==0.7.2"]
+  "requirements": ["python-kasa[speedups]==0.7.7"]
 }
