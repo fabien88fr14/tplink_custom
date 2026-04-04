@@ -4,7 +4,7 @@
   "codeowners": ["@rytilahti", "@bdraco", "@sdb9696"],
   "config_flow": true,
   "dependencies": ["network", "ffmpeg", "stream"],
-  "version": "2026.3.3",
+  "version": "2026.4.1",
   "dhcp": [
     {
       "registered_devices": true
