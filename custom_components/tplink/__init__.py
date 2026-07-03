@@ -231,7 +231,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: TPLinkConfigEntry) -> bo
         )
 
     parent_coordinator = TPLinkDataUpdateCoordinator(
-        hass, device, timedelta(seconds=5), entry
+        hass, device, timedelta(seconds=1), entry
     )
 
     camera_creds: Credentials | None = None
