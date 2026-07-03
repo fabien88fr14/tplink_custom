@@ -1,6 +1,5 @@
 """Component to embed TP-Link smart home devices."""
-
-from __future__ import annotations
+# pylint: disable=home-assistant-use-runtime-data  # Uses legacy hass.data[DOMAIN] pattern
 
 import asyncio
 from collections.abc import Iterable
@@ -232,7 +231,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: TPLinkConfigEntry) -> bo
         )
 
     parent_coordinator = TPLinkDataUpdateCoordinator(
-        hass, device, timedelta(seconds=1), entry
+        hass, device, timedelta(seconds=5), entry
     )
 
     camera_creds: Credentials | None = None
